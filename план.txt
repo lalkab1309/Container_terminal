@@ -1,0 +1,375 @@
+Header:
+1) Контакнты
+2) Услуги
+3) Главная
+
+Footer:
+1) Поддержка
+2) О нас
+
+Main:
+1) Добавить картинки-ссылки
+2) Разобраться с этим:
+
+.main {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: auto;
+}
+
+.main .main_img .field {
+  background: rgba(0, 0, 0, 0.5); /* цвет фона с прозрачностью */
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative; /* позиционирование относительно родительского элемента */
+}
+
+.main .main_img .field::before {
+  content: "";
+  display: block;
+  position: absolute; /* абсолютное позиционирование относительно родительского элемента */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* наследуем фон от родительского элемента */
+  z-index: -1; /* устанавливаем z-index ниже чем у изображения */
+}
+
+.main .main_img .img_1 {
+  width: 400px;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  border-radius: 30%;
+  position: relative; /* позиционирование относительно родительского элемента */
+  z-index: 1; /* устанавливаем z-index выше чем у псевдоэлемента ::before */
+} 
+
+.main .main_img .img_1::after {
+  content: '20.10.2023 изменяется номер "Разрешение на временное хранение товаров"';
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -360px;
+  z-index: 2;
+}
+
+3) Вставить еще картинки и текст к ним
+
+
+
+
+
+
+
+
+Index.css (
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  overflow: hidden;
+  background: grey;
+  background: url(./img/background_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1440px;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.header .header_logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header .header_logo .icon_con {
+  margin-right: 10px;
+  margin-left: 35px;
+  width: 50px;
+  height: 40px;
+  color: blue;
+}
+
+.header .header_logo h1 {
+  margin: 0;
+  color: black;
+}
+
+.header .navigation {
+  display: inline;
+  height: 100%;
+}
+
+.header .navigation .spisok {
+  margin-right: 45px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header .navigation .spisok li {
+  margin: 0 30px;
+  color: black;
+  display: inline;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 1s ease;
+}
+
+.header .navigation .spisok li:hover {
+  color: red;
+}
+
+.header .text_li {
+  color: black;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.header .text_li:hover {
+  color: red;
+}
+
+.header .profile {
+  /*border: 0 solid black;
+  border-radius: 10px;
+  padding: 10px 20px;*/
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 40px;
+  height: 100%;
+}
+
+
+
+.header .profile .icon_acc {
+  width: 50px;
+  height: 50px;
+}
+
+.header .text {
+  margin-right: 50px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 1s ease;
+}
+
+.header .text:hover {
+  color: red;
+}
+
+.main {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: auto;
+}
+
+.main .main_img .field {
+  background: rgba(0, 0, 0, 0.5); /* цвет фона с прозрачностью */
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative; /* позиционирование относительно родительского элемента */
+}
+
+.main .main_img .field::before {
+  content: "";
+  display: block;
+  position: absolute; /* абсолютное позиционирование относительно родительского элемента */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* наследуем фон от родительского элемента */
+  z-index: -1; /* устанавливаем z-index ниже чем у изображения */
+}
+
+.main .main_img .img_1 {
+  width: 400px;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 30%;
+  position: relative; /* позиционирование относительно родительского элемента */
+  z-index: 1; /* устанавливаем z-index выше чем у псевдоэлемента ::before */
+} 
+
+.main .main_img .img_1::after {
+  border: 0 solid black;
+  background-color: grey;
+  border-radius: 30px;
+  opacity: 0.8;
+  margin-right: 50px;
+  margin-top: 400px;
+  content: '20.10.2023 изменяется номер "Разрешение на временное хранение товаров"';
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: -360px;
+  z-index: 2;
+}
+
+.main h2 {
+  margin-top: -250px;
+  margin-left: 850px;
+  color: white;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.main .main_img .img_2 {
+  width: 400px;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 30%;
+  position: relative; /* позиционирование относительно родительского элемента */
+  z-index: 1; /* устанавливаем z-index выше чем у псевдоэлемента ::before */
+} 
+
+.main .main_img .img_2::after {
+  border: 0 solid black;
+  background-color: grey;
+  border-radius: 30px;
+  opacity: 0.8;
+  margin-right: 40px;
+  margin-top: 400px;
+  content: 'Корпоративная аудитория Группы ППК В ГУМРФ имени адмирала С.О. МАКАРОВА';
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -360px;
+  z-index: 2;
+}
+
+.main .main_img .img_3 {
+  width: 400px;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 120px;
+  border-radius: 30%;
+  position: relative; /* позиционирование относительно родительского элемента */
+  z-index: 1; /* устанавливаем z-index выше чем у псевдоэлемента ::before */
+} 
+
+.main .main_img .img_3::after {
+  border: 0 solid black;
+  background-color: grey;
+  border-radius: 30px;
+  opacity: 0.8;
+  margin-right: 40px;
+  margin-top: 400px;
+  content: 'Обновлено мобильное приложение Smart Loading';
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -360px;
+  z-index: 2;
+}
+.main .main_img .img_4 {
+  width: 400px;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 30%;
+  position: relative; /* позиционирование относительно родительского элемента */
+  z-index: 1; /* устанавливаем z-index выше чем у псевдоэлемента ::before */
+  transition: transform 1s ease;
+} 
+
+.main .main_img .img_4::after {
+  border: 0 solid black;
+  background-color: grey;
+  border-radius: 30px;
+  opacity: 0.8;
+  margin-right: 40px;
+  margin-top: 400px;
+  content: 'Обновлено мобильное приложение Smart Loading';
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -360px;
+  z-index: 2;
+}
+
+.main .main_img .img_4:hover {
+  transform: scale(1.02);
+}
+)
+
+Main.js (
+  import React from 'react'
+
+export default function Main () {
+  return (
+    <div className='main'>
+        <div className='main_img'>
+            <fieldset className='field'>
+                <a href="#" className='img_1' target='_blank'>
+                    <img src="https://1terminal.ru/assets/images/informacija/3.jpg" alt="port" className='img_1'></img>
+                </a>
+                <a href='#' className='img_2' target='_blank'>
+                  <img src='https://pso13.ru/sites/default/files/object/112/konteynernyy-terminal-zapad-904.jpg' className='img_2'></img>
+                </a>
+                <a href='#' className='img_3' target='_blank'>
+                  <img src='https://konversta.com/ru/images/projects/bg-terminalspb-small.jpg' className='img_3'></img>
+                </a>
+                <a href='#' className='img_4' target='_blank'>
+                  <img src='https://avatars.mds.yandex.net/get-altay/10648814/2a0000018bd34e7a671e67e49304db8e360c/L_height' className='img_4'></img>
+                </a>
+            </fieldset>
+        </div>
+        <h2>НОВОСТИ</h2>
+    </div>
+  )
+}
+
+)
